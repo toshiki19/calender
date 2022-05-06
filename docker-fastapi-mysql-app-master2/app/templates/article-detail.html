@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="content">
+        <div class='example'>
+        <h2>{{ article["title"] }}</h2>
+        
+        <p >{{ article["body"] }}</p>
+        <p >
+            <i>投稿者: {{ article["username"] }}</i>
+        </p>
+        <a href="{{ url_for('calender') }}" class="button2">カレンダー</a>
+    
+</div>
+</div>
+
+{% endblock %}
+
