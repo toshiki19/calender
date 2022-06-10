@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="content">
+        <div class='example'>
+        <h2>投稿一覧</h2>
+        <ul class='article'>
+            {% for article in articles %}
+                <li>
+                    <a href="{{ url_for("article_detail_page", article_id=article["id"]) }}" class="url">{{ article["title"] }} </a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% if not articles %}
+            <p>投稿された記事はありません</p>
+        {% endif %}
+    <a href="{{ url_for('calender') }}" class="button2">カレンダー</a>
+</div>
+    </div>
+{% endblock %}
